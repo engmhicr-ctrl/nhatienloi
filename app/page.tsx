@@ -1,288 +1,169 @@
-export default function NhaTienLoiLandingPage() {
-  const houses = [
+export default function HomePage() {
+  const projects = [
     {
-      title: 'Tiny House',
-      size: '30 - 45m²',
-      price: 'Từ 350 triệu',
+      id: 1,
+      title: 'Nhà phố hiện đại',
+      area: '120m²',
+      price: '2.4 tỷ',
+      image:
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 2,
+      title: 'Biệt thự sân vườn',
+      area: '250m²',
+      price: '5.8 tỷ',
+      image:
+        'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 3,
+      title: 'Nhà cấp 4 hiện đại',
+      area: '90m²',
+      price: '1.2 tỷ',
+      image:
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop',
+    },
+  ];
+
+  const gallery = [
+    {
+      title: 'Villa nghỉ dưỡng',
+      size: '350m²',
+      price: '6.2 tỷ',
       image:
         'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop',
     },
     {
-      title: 'Eco Villa',
-      size: '80 - 150m²',
-      price: 'Từ 1.2 tỷ',
+      title: 'Nhà phố mặt tiền',
+      size: '150m²',
+      price: '3.1 tỷ',
       image:
-        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop',
     },
     {
-      title: 'Farm Stay',
-      size: '60 - 90m²',
-      price: 'Từ 650 triệu',
+      title: 'Biệt thự hiện đại',
+      size: '280m²',
+      price: '5.6 tỷ',
       image:
-        'https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=1200&auto=format&fit=crop',
     },
     {
-      title: 'Prefab Office',
-      size: '90 - 200m²',
-      price: 'Từ 700 triệu',
+      title: 'Nhà vườn xanh mát',
+      size: '200m²',
+      price: '3.8 tỷ',
       image:
-        'https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop',
     },
-  ];
-
-  const materials = [
-    {
-      title: 'Kết cấu sắt hình',
-      desc: 'Khung thép V và hộp mạ kẽm chống ăn mòn, độ bền cao.',
-    },
-    {
-      title: 'Bê tông nhẹ',
-      desc: 'Giảm tải trọng, cách nhiệt tốt, thi công nhanh.',
-    },
-    {
-      title: 'Panel cách nhiệt',
-      desc: 'Giữ nhiệt ổn định và giảm tiêu thụ điện năng.',
-    },
-    {
-      title: 'Kính Low-E',
-      desc: 'Tối ưu ánh sáng tự nhiên và giảm nhiệt.',
-    },
-  ];
-
-  const benefits = [
-    'Thi công nhanh chỉ từ 2 - 8 tuần',
-    'Giảm phát thải CO₂ trong xây dựng',
-    'Tiết kiệm điện năng vận hành',
-    'Có thể tháo lắp và mở rộng dễ dàng',
   ];
 
   return (
-    <div className="bg-white text-zinc-800">
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-extrabold text-green-700 lowercase">
-              nhà tiện lợi
-            </h1>
-            <p className="text-xs tracking-[0.25em] text-zinc-500 uppercase">
-              xây nhanh ở xanh
-            </p>
+    <main className="bg-[#07140d] text-white min-h-screen overflow-hidden">
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 backdrop-blur-md bg-black/20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+          <div className="text-3xl font-bold tracking-widest">
+            NHÀ TIỆN LỢI
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 font-medium">
-            <a href="#" className="hover:text-green-700">
-              Trang chủ
-            </a>
-            <a href="#mau-nha" className="hover:text-green-700">
-              Mẫu nhà
-            </a>
-            <a href="#vat-lieu" className="hover:text-green-700">
-              Vật liệu
-            </a>
-            <a href="#du-an" className="hover:text-green-700">
-              Dự án
-            </a>
-            <a href="#lien-he" className="hover:text-green-700">
-              Liên hệ
-            </a>
+          <nav className="hidden md:flex gap-10 text-sm uppercase tracking-widest text-white/80">
+            <a href="#">Trang chủ</a>
+            <a href="#">Mẫu nhà</a>
+            <a href="#">Bộ sưu tập</a>
+            <a href="#">Liên hệ</a>
           </nav>
 
-          <button className="bg-green-700 hover:bg-green-800 text-white px-5 py-3 rounded-2xl font-semibold shadow-lg transition-all">
-            Nhận tư vấn
-          </button>
+          <div className="text-sm text-green-300">0901 234 567</div>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative h-screen w-full flex items-center">
         <img
-          src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1800&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2000&auto=format&fit=crop"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center pt-28">
-          <div>
-            <div className="inline-flex bg-green-500/20 border border-green-400 text-green-200 px-4 py-2 rounded-full mb-6 backdrop-blur">
-              NHÀ LẮP GHÉP THẾ HỆ MỚI
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <div className="max-w-2xl">
+            <p className="uppercase tracking-[0.3em] text-green-300 mb-6">
+              Xây nhanh - Ở xanh
+            </p>
 
-            <h2 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-              XÂY NHANH
+            <h1 className="text-6xl md:text-8xl font-black leading-none mb-8">
+              NHÀ
               <br />
-              <span className="text-green-400">Ở XANH</span>
-            </h2>
+              TIỆN LỢI
+            </h1>
 
-            <p className="text-zinc-200 text-lg leading-8 mb-10 max-w-xl">
-              Giải pháp nhà lắp ghép hiện đại với kết cấu sắt hình và vật
-              liệu bê tông nhẹ giúp giảm phát thải, tối ưu chi phí và hoàn
-              thiện nhanh chóng.
+            <p className="text-lg text-white/70 leading-8 max-w-xl mb-10">
+              Giải pháp nhà hiện đại tối ưu công năng, xây dựng nhanh,
+              không gian sống xanh và tinh tế.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl transition-all">
-                Xem mẫu nhà
-              </button>
-
-              <button className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold backdrop-blur hover:bg-white/20 transition-all">
-                Nhận tư vấn miễn phí
-              </button>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-[32px] p-8 shadow-2xl max-w-md ml-auto">
-            <div className="space-y-8">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-4xl font-extrabold text-green-700">-60%</p>
-                  <p className="text-zinc-600">Giảm phát thải CO₂</p>
-                </div>
-                <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                  ♻️
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-4xl font-extrabold text-green-700">+50%</p>
-                  <p className="text-zinc-600">Tiết kiệm điện năng</p>
-                </div>
-                <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                  ⚡
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-4xl font-extrabold text-green-700">2-4</p>
-                  <p className="text-zinc-600">Tuần thi công hoàn thiện</p>
-                </div>
-                <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                  🏗️
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFITS */}
-      <section className="py-24 bg-zinc-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-3xl p-8 shadow-sm border border-zinc-100 hover:shadow-xl transition-all"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-2xl mb-5">
-                🌿
-              </div>
-              <h3 className="font-bold text-xl leading-8">{item}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* MATERIALS */}
-      <section id="vat-lieu" className="py-28">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-green-700 font-bold mb-4">
-              Công nghệ & vật liệu
-            </p>
-
-            <h2 className="text-5xl font-extrabold mb-8 leading-tight">
-              Kết cấu sắt hình
-              <br />
-              kết hợp bê tông nhẹ
-            </h2>
-
-            <p className="text-zinc-600 text-lg leading-9 mb-10">
-              Hệ khung thép được gia công chuẩn module giúp thi công nhanh,
-              chịu lực cao và dễ mở rộng. Vật liệu bê tông nhẹ giảm tải trọng
-              công trình, tăng khả năng cách nhiệt và giảm chi phí vận hành.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-6">
-              {materials.map((item, index) => (
-                <div
-                  key={index}
-                  className="border border-zinc-200 rounded-3xl p-6 hover:border-green-500 transition-all"
-                >
-                  <h3 className="font-extrabold text-xl mb-3 text-green-700">
-                    {item.title}
-                  </h3>
-                  <p className="text-zinc-600 leading-7">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-[40px] shadow-2xl"
-            />
-
-            <div className="absolute -bottom-10 -left-10 bg-white rounded-3xl p-8 shadow-2xl max-w-sm border border-zinc-100">
-              <p className="text-4xl font-extrabold text-green-700 mb-2">
-                30%
-              </p>
-              <p className="text-zinc-600 leading-7">
-                Giảm tải trọng công trình nhờ ứng dụng bê tông nhẹ và module
-                thép tối ưu.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* HOUSE COLLECTION */}
-      <section id="mau-nha" className="py-28 bg-zinc-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-14">
-            <div>
-              <p className="uppercase tracking-[0.3em] text-green-700 font-bold mb-4">
-                Bộ sưu tập
-              </p>
-              <h2 className="text-5xl font-extrabold leading-tight">
-                Mẫu nhà lắp ghép xanh
-              </h2>
-            </div>
-
-            <button className="border border-green-700 text-green-700 px-6 py-4 rounded-2xl font-bold hover:bg-green-700 hover:text-white transition-all">
-              Xem tất cả mẫu nhà
+            <button className="bg-green-700 hover:bg-green-600 transition px-10 py-5 rounded-full text-sm uppercase tracking-widest">
+              Xem bộ sưu tập
             </button>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {houses.map((house, index) => (
+      {/* PROJECTS */}
+      <section className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-20">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-green-300 mb-4">
+                Mẫu nhà nổi bật
+              </p>
+
+              <h2 className="text-5xl font-black">MẪU NHÀ</h2>
+            </div>
+
+            <p className="text-white/60 max-w-md text-right hidden md:block">
+              Những thiết kế tối ưu công năng, mang đậm dấu ấn hiện đại và
+              thiên nhiên.
+            </p>
+          </div>
+
+          <div className="space-y-24">
+            {projects.map((item, index) => (
               <div
-                key={index}
-                className="bg-white rounded-[32px] overflow-hidden shadow-sm hover:shadow-2xl transition-all group"
+                key={item.id}
+                className={`grid md:grid-cols-2 gap-12 items-center ${
+                  index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
+                }`}
               >
-                <div className="overflow-hidden h-72">
+                <div className="overflow-hidden rounded-[40px] border border-green-900/50">
                   <img
-                    src={house.image}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                    src={item.image}
+                    className="w-full h-[500px] object-cover hover:scale-105 transition duration-700"
                   />
                 </div>
 
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-extrabold">{house.title}</h3>
-                    <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-                      {house.size}
-                    </span>
+                <div>
+                  <div className="text-green-300 mb-4 text-sm tracking-[0.3em]">
+                    0{index + 1}
                   </div>
 
-                  <p className="text-green-700 font-extrabold text-2xl mb-6">
-                    {house.price}
+                  <h3 className="text-5xl font-bold mb-6 uppercase">
+                    {item.title}
+                  </h3>
+
+                  <div className="flex gap-6 text-white/60 mb-8 text-sm">
+                    <span>{item.area}</span>
+                    <span>•</span>
+                    <span>{item.price}</span>
+                  </div>
+
+                  <p className="text-white/70 leading-8 mb-10 max-w-lg">
+                    Thiết kế hiện đại, tối ưu ánh sáng tự nhiên và không gian
+                    xanh cho trải nghiệm sống đẳng cấp.
                   </p>
 
-                  <button className="w-full bg-zinc-900 text-white py-4 rounded-2xl font-bold hover:bg-green-700 transition-all">
+                  <button className="border border-green-700 hover:bg-green-700 transition px-8 py-4 rounded-full uppercase tracking-widest text-sm">
                     Xem chi tiết
                   </button>
                 </div>
@@ -292,126 +173,102 @@ export default function NhaTienLoiLandingPage() {
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="py-28">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-green-700 font-bold mb-4">
-            Quy trình thi công
+      {/* GALLERY APPLE STYLE */}
+      <section className="bg-[#f5f5f0] text-black py-28 overflow-hidden">
+        <div className="text-center mb-16 px-6">
+          <p className="uppercase tracking-[0.3em] text-green-700 mb-4">
+            Cám ơn bạn đã ghé thăm
           </p>
 
-          <h2 className="text-5xl font-extrabold mb-20">
-            Từ thiết kế đến hoàn thiện
-          </h2>
+          <h2 className="text-6xl font-black mb-6">Thư viện cảm hứng</h2>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {[
-              'Tư vấn',
-              'Thiết kế',
-              'Gia công',
-              'Vận chuyển',
-              'Lắp đặt',
-              'Hoàn thiện',
-            ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="w-24 h-24 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center text-3xl font-extrabold mb-6 shadow-xl">
-                  {index + 1}
-                </div>
-                <h3 className="font-extrabold text-xl">{step}</h3>
-              </div>
-            ))}
-          </div>
+          <p className="text-black/60 max-w-2xl mx-auto">
+            Khám phá những không gian sống hiện đại, xanh và đầy cảm xúc.
+          </p>
         </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-28 relative overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1800&auto=format&fit=crop"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <div className="flex gap-8 overflow-x-auto px-10 pb-10 snap-x snap-mandatory scrollbar-hide">
+          {gallery.map((item, index) => (
+            <div
+              key={index}
+              className="min-w-[320px] md:min-w-[420px] h-[620px] rounded-[40px] overflow-hidden relative group snap-center flex-shrink-0"
+            >
+              <img
+                src={item.image}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700"
+              />
 
-        <div className="absolute inset-0 bg-green-950/80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
-        <div className="relative max-w-5xl mx-auto px-6 text-center text-white">
-          <h2 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
-            Sống xanh không chỉ là xu hướng
-            <br />
-            mà là tương lai.
-          </h2>
+              <div className="absolute bottom-0 left-0 p-10 text-white">
+                <h3 className="text-4xl font-bold mb-4">{item.title}</h3>
 
-          <p className="text-xl text-green-100 leading-9 max-w-3xl mx-auto mb-12">
-            Nhà Tiện Lợi mang đến giải pháp nhà lắp ghép hiện đại với kết cấu
-            sắt hình và bê tông nhẹ, giúp xây dựng nhanh, bền vững và thân
-            thiện môi trường.
-          </p>
+                <div className="text-white/70 mb-6">
+                  {item.size} • {item.price}
+                </div>
 
-          <div className="flex flex-wrap justify-center gap-5">
-            <button className="bg-green-500 hover:bg-green-400 text-white px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl transition-all">
-              Đăng ký tư vấn
-            </button>
-
-            <button className="border border-white/30 hover:bg-white/10 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all">
-              Tải catalogue PDF
-            </button>
-          </div>
+                <button className="bg-white text-black px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-green-300 transition">
+                  Khám phá
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer
-        id="lien-he"
-        className="bg-zinc-950 text-zinc-400 py-20 border-t border-zinc-800"
-      >
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12">
+      <footer className="border-t border-white/10 py-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
           <div>
-            <h2 className="text-3xl font-extrabold text-white lowercase mb-3">
-              nhà tiện lợi
-            </h2>
-            <p className="uppercase tracking-[0.25em] text-green-500 text-xs mb-8">
-              xây nhanh ở xanh
-            </p>
+            <div className="text-3xl font-bold mb-6">NHÀ TIỆN LỢI</div>
 
-            <p className="leading-8">
-              Giải pháp nhà lắp ghép xanh ứng dụng kết cấu sắt hình và vật
-              liệu bê tông nhẹ.
+            <p className="text-white/60 leading-8">
+              Xây nhanh - Ở xanh
+              <br />
+              Không gian sống hiện đại.
             </p>
           </div>
 
           <div>
-            <h3 className="text-white font-extrabold text-xl mb-6">Dịch vụ</h3>
-            <ul className="space-y-4">
-              <li>Nhà lắp ghép</li>
-              <li>Eco Villa</li>
-              <li>Farm Stay</li>
-              <li>Prefab Office</li>
-            </ul>
+            <div className="font-bold mb-6 uppercase tracking-widest">
+              Liên hệ
+            </div>
+
+            <div className="space-y-4 text-white/60">
+              <div>0901 234 567</div>
+              <div>contact@nhatientloi.vn</div>
+              <div>Nha Trang, Khánh Hòa</div>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-white font-extrabold text-xl mb-6">Công nghệ</h3>
-            <ul className="space-y-4">
-              <li>Kết cấu sắt hình</li>
-              <li>Bê tông nhẹ</li>
-              <li>Panel cách nhiệt</li>
-              <li>Smart Home</li>
-            </ul>
+            <div className="font-bold mb-6 uppercase tracking-widest">
+              Danh mục
+            </div>
+
+            <div className="space-y-4 text-white/60">
+              <div>Trang chủ</div>
+              <div>Mẫu nhà</div>
+              <div>Bộ sưu tập</div>
+              <div>Liên hệ</div>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-white font-extrabold text-xl mb-6">Liên hệ</h3>
-            <ul className="space-y-4">
-              <li>Hotline: 0981939421</li>
-              <li>Email: info@nhatienloi.vn</li>
-              <li>Nha Trang, Việt Nam</li>
-            </ul>
+            <div className="font-bold mb-6 uppercase tracking-widest">
+              Google Sheet API
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-sm text-white/60 leading-7">
+              Dữ liệu ảnh, giá, diện tích sẽ được load realtime từ Google Sheet.
+            </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-zinc-800 text-sm text-zinc-500 flex flex-col md:flex-row justify-between gap-4">
-          <p>© 2026 Nhà Tiện Lợi. All rights reserved.</p>
-          <p>XÂY NHANH • Ở XANH</p>
+        <div className="text-center text-white/30 mt-20 text-sm">
+          © 2026 NHÀ TIỆN LỢI. All rights reserved.
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
