@@ -156,8 +156,8 @@ export default function NhaTienLoiLandingPage() {
 
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-4xl font-black text-green-700">2-8</p>
-                  <p className="text-zinc-600">Tuần thi công</p>
+                  <p className="text-4xl font-black text-green-700">2-4</p>
+                  <p className="text-zinc-600">Tuần thi công hoàn thiện</p>
                 </div>
                 <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
                   🏗️
