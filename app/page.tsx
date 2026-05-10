@@ -400,7 +400,7 @@ export default function NhaTienLoiLandingPage() {
           <div>
             <h3 className="text-white font-black text-xl mb-6">Liên hệ</h3>
             <ul className="space-y-4">
-              <li>Hotline: 0901 234 567</li>
+              <li>Hotline: 0981939421</li>
               <li>Email: info@nhatienloi.vn</li>
               <li>Nha Trang, Việt Nam</li>
             </ul>
