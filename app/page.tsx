@@ -73,7 +73,7 @@ export default function HomePage() {
             <a href="#">Liên hệ</a>
           </nav>
 
-          <div className="text-sm text-green-300">0901 234 567</div>
+          <div className="text-sm text-green-300">0981 939 421</div>
         </div>
       </header>
 
@@ -235,7 +235,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4 text-white/60">
-              <div>0901 234 567</div>
+              <div>0981 939 421</div>
               <div>contact@nhatientloi.vn</div>
               <div>Nha Trang, Khánh Hòa</div>
             </div>
